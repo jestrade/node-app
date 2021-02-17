@@ -10,7 +10,7 @@ const users = [
 
 (async () => {
   await mongoose.connect(
-    process.env.DB_CONN_STRING,
+    process.env.DB_CONN_STRING || '',
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
