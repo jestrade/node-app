@@ -1,3 +1,4 @@
+const { static } = require('express');
 const express = require('express');
 const mongoose = require('mongoose');
 const User = require('./user');
@@ -20,9 +21,11 @@ const connectDB = async () => {
   );
 };
 
+app.use(express.static('public'));
+
 app.get('/api/users', async (req, res) => {
   try {
-    const users = await User.find({}, ['name', 'username']);
+    const users = await User.find({}, ['name', 'username', 'createdAt']);
     res.json(users);
   } catch (err) {
     res.json(err);
