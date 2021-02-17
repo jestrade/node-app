@@ -2,7 +2,7 @@
 
 Minimal demo Node/express app
 
-## Isntallation
+## Installation
 
 To install the app use:
 
