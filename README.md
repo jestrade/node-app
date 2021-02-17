@@ -14,7 +14,10 @@ Create a .env file to config the http port.
 
 Example:
 
-`PORT=8080`
+```
+PORT=8080
+DB_CONN_STRING=mongodb://localhost/node-app
+```
 
 ## Run
 
